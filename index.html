@@ -12,6 +12,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="//unpkg.com/a11y-slider@latest/dist/a11y-slider.css"
+    />
+    <script src="//unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
   </head>
 
   <body>
@@ -69,7 +74,7 @@
               <button class="button">Get Started</button>
             </div>
 
-            <div>
+            <div class="hero-img">
               <img src="images/illustration-intro.svg" alt="" />
             </div>
           </div>
@@ -89,10 +94,11 @@
                 product teams.
               </p>
             </div>
+
             <div>
               <ul class="numbered-items flow" role="list">
                 <li>
-                  <di class="flow" style="--flow-spacer: 1.5em">
+                  <div class="flow" style="--flow-spacer: 1.5em">
                     <h3 class="fs-600 fw-bold">Track company-wide progress</h3>
                     <p data-width="wide">
                       See how your day-to-day tasks fit into the wider vision.
@@ -100,7 +106,7 @@
                       way done to the smallest of details. Never lose sight of
                       the bigger picture again.
                     </p>
-                  </di>
+                  </div>
                 </li>
 
                 <li>
@@ -133,9 +139,62 @@
         </div>
       </section>
 
-      <section class="carousel padding-block-700">
+      <section class="carousel padding-block-700 text-center">
         <h2 class="h1 fs-secondary-heading fw-bold">What they've said</h2>
         <!-- Carousel -->
+        <ul class="slider">
+          <li>
+            <img src="images/avatar-ali.png" alt="avatar-ali" />
+            <div class="slider-content">
+              <h3 class="fw-bold text-center">Ali Brave</h3>
+              <p data-width="wid">
+                Manage has allowed us to cancel all the other subscriptions. It
+                makes us more focused and togeather as a team. I am very
+                satisfied and happy that I bought manage as a professional
+                software.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <img src="images/avatar-richard.png" alt="avatar-ali" />
+            <div class="slider-content">
+              <h3 class="fw-bold text-center">Richard Ronaldo</h3>
+              <p data-width="wid">
+                I have unsubscribed other subscriptions cuz this is all in one.
+                I am very happy and satisfied. This is so much fun and good. It
+                is fun and more professional to use manage as your meetup
+                software.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <img src="images/avatar-shanai.png" alt="avatar-ali" />
+            <div class="slider-content">
+              <h3 class="fw-bold text-center">Shanai Zubesh</h3>
+              <p data-width="wid">
+                This is the most helpful software I have ever tried. Helps you
+                with most of the stuff other can't provide. It provides
+                everything you need to keep working as a team. All of it's
+                features are good and helpful.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <img src="images/avatar-anisha.png" alt="avatar-ali" />
+            <div class="slider-content">
+              <h3 class="fw-bold text-center">Anisha Smith</h3>
+              <p data-width="wide">
+                This software didn't only help me but my overall team. We are
+                now more focused because of it's features and there are no
+                errors. Overall very good software if you want your team to be
+                focused.
+              </p>
+            </div>
+          </li>
+        </ul>
         <button class="button">Get Started</button>
       </section>
 
@@ -157,36 +216,78 @@
       <footer class="bg-neutral-900 text-neutral-100 padding-block-700">
         <div class="container">
           <div class="even-columns">
-            <div>
+            <div class="footer-container">
               <a href="#"
                 ><img src="images/logo.svg" alt="Logo" class="logo"
               /></a>
-              <ul role="list" aria-label="Social links">
-                <li><a aria-label="facebook" href="#"></a></li>
-                <li><a aria-label="Youtube" href="#"></a></li>
-                <li><a aria-label="Twitter" href="#"></a></li>
-                <li><a aria-label="Pinterest" href="#"></a></li>
-                <li><a aria-label="Instagram" href="#"></a></li>
-              </ul>
+
+              <div class="social-links">
+                <ul role="list" aria-label="Social links">
+                  <li>
+                    <a aria-label="facebook" href="#"
+                      ><img
+                        src="images/icon-twitter.svg"
+                        class="social-media-links"
+                    /></a>
+                  </li>
+                  <li>
+                    <a aria-label="Youtube" href="#"
+                      ><img
+                        src="images/icon-youtube.svg"
+                        class="social-media-links"
+                    /></a>
+                  </li>
+                  <li>
+                    <a aria-label="Twitter" href="#"
+                      ><img
+                        src="images/icon-facebook.svg"
+                        class="social-media-links"
+                    /></a>
+                  </li>
+                  <li>
+                    <a aria-label="Pinterest" href="#"
+                      ><img
+                        src="images/icon-instagram.svg"
+                        class="social-media-links"
+                    /></a>
+                  </li>
+                  <li>
+                    <a aria-label="Instagram" href="#"
+                      ><img
+                        src="images/icon-pinterest.svg"
+                        class="social-media-links"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div>
-              <nav role="list" class="flow" style="--flow-spacer: 1em">
-                <li><a href="">Home</a></li>
-                <li><a href="">Pricing</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">About-Us</a></li>
-                <li><a href="">Community</a></li>
-                <li><a href="">Careers</a></li>
-                <li><a href="">Privacy Policy</a></li>
+            <div class="footer-nav-container">
+              <nav class="footer-nav">
+                <ul role="list" class="flow" style="--flow-spacer: 1em">
+                  <li><a href="">Home</a></li>
+                  <li><a href="">Pricing</a></li>
+                  <li><a href="">Products</a></li>
+                  <li><a href="">About-Us</a></li>
+                  <li><a href="">Community</a></li>
+                  <li><a href="">Careers</a></li>
+                  <li><a href="">Privacy Policy</a></li>
+                </ul>
               </nav>
             </div>
 
             <div>
               <form action="">
-                <input type="email" />
-                <button class="button">Go</button>
-                <p>Copyright All Right Reserved</p>
+                <div class="footer-input">
+                  <div class="input">
+                    <input type="email" placeholder="Type Your Email" />
+                    <button class="button">Go</button>
+                  </div>
+
+                  <div class="copyright">
+                    <p>Copyright All Right Reserved</p>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
